@@ -8,9 +8,9 @@ window.onscroll = ( () => { resizeHeader() });
 
 // Shrink navbar on scroll
 const logo = document.getElementById('header-img');
-const navbar = document.getElementById('nav-bar');
+const header = document.getElementById('header');
 const ul = document.querySelector('#nav-bar ul');
-const navbarBottom = 200;
+const headerBottom = 200;
 let size = 0;
 
 const resizeHeader = ( () => {
@@ -19,18 +19,16 @@ const resizeHeader = ( () => {
                document.body.scrollTop ||
                0;
 
-  // If scroll has happened
-  if (size === 0 && scroll > navbarBottom) {
+  // Scroll has happened
+  if (size === 0 && scroll > headerBottom) {
     logo.className = 'logo-sm';
-    navbar.style.height = '140px';
-    ul.style.marginTop = '85px';
+    header.style.height = '150px';
     size = 1;
 
-  // If no scroll has happened 
-  } else if (size === 1 && scroll <= navbarBottom) {
+  // No scroll has happened
+} else if (size === 1 && scroll <= headerBottom) {
     logo.className = 'logo-lg';
-    navbar.style.height = '225px';
-    ul.style.marginTop = '170px';
+    header.style.height = '230px';
     size = 0;
   }
 });

@@ -14,55 +14,59 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit;
-}
-
-body {
   margin: 0;
   padding: 0;
-  font-family: cursive;
 }
 
 header {
-  display: flex;
-  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 230px;
+  background-color: $beige;
+  transition: 0.4s;
+  z-index: 100;
+}
+
+#header-wrapper {
+  position: relative;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+#header-img {
+  margin: 25px 25px 0px 25px;
+  transition:  0.4s; // all ?
+}
+
+.logo-sm {
+ width: 125px;
+}
+
+.logo-lg {
+ width: 250px;
 }
 
 // Navigation - see Notes 1)
 #nav-bar {
-  position: fixed;
-  overflow: hidden; // But why?
-  top: 0;
-  height: 225px;
+  height: auto;
   width: 100%;
-  background-color: $beige;
-  z-index: 100;
-  transition: 0.4s;
-
-  #header-img {
-    position: fixed;
-    margin: 25px 25px 0px 25px;
-    transition: all 0.4s; // all ?
-  }
-  .logo-sm {
-   width: 125px;
-  }
-  .logo-lg {
-   width: 250px;
-  }
+  // border: 1px solid red;
 
   ul {
     display: flex;
     justify-content: space-around;
-    margin-top: 165px;
-    padding: 25px 25px;
+    padding: 10px;
     list-style-type: none;
-    height: 1px;
     transition: all 0.4s;
+    // border: 1px solid black;
 
     li {
       float: left;
 
       a {
+        padding: 0;
+        margin: 0;
         display: block;
         font-family: $fonts-brand;
         font-size: 1.3em;
@@ -79,13 +83,14 @@ header {
 }
 
 main {
+  margin: 0 auto;
   margin-top: 225px;
-  z-index: -100px;
   padding: 25px;
+  max-width: 768px;
 }
 
 section {
-  margin-top: 25px;
+  margin: 50px 0;
 }
 
 button, #submit {
@@ -108,17 +113,18 @@ button, #submit {
 }
 
 form {
-  border: 1px solid red;
+  padding: 15px;
+  margin-bottom: 40px;
   background-color: $brown-light;
   border: 2px outset $brown-dark;
   border-radius: 7px;
-  padding: 15px;
 
   #email {
-    width: 100%;
+    display: block;
+    width: 85%;
     height: 30px;
     margin: 0 auto;
-    padding-left: 5px;
+    padding-left: 10px;
     font-size: .8em;
     border-radius: 7px;
   }
@@ -134,9 +140,18 @@ form {
 
 .icon {
   position: relative;
-  top: 15px;
+  top: 5px;
   float: left;
-  margin: 0 20px 10px 0;
+  margin: 0 20px 20px 0;
+}
+
+a {
+  color: $brown-light;
+  text-decoration: none;
+
+  &:hover {
+    color: $brown-dark
+  }
 }
 
 h1, h2, h3 {
@@ -156,7 +171,8 @@ h1 {
 
 h2 {
   color: $orange;
-  font-size: 1.3em;
+  font-size: 1.4em;
+  margin-bottom: 15px;
 
   // See Notes 2)
   &::before {
@@ -169,10 +185,14 @@ h2 {
   }
 }
 
+#products-header {
+  margin-bottom: -25px;
+}
+
 h3 {
   color: $orange;
   font-size: 1em;
-  margin-bottom: 10px;
+  margin: 20px 0 10px;
 }
 
 p {
@@ -182,8 +202,6 @@ p {
 }
 
 #products {
-  // background-color: $brown-light;
-
   .product {
     background-color: $beige;
     border: 1px solid $brown-light;
@@ -204,13 +222,12 @@ p {
     }
 
     h5 {
-      padding: 0 25px;
+      padding: 20px 25px 10px;
       font-weight: normal;
-      margin-block-end: 0; // user agent style
     }
 
     li {
-      margin-left: 15px;
+      margin-left: 50px;
     }
 
     #select {
@@ -226,12 +243,13 @@ p {
 
   // Responsive iframe - See Notes 3)
   .video {
+    margin: 15px 0 20px;
     position: relative;
     padding-bottom: 56.25%; // 16:9
     height: 0;
 
     iframe {
-      padding: 10px 25px 25px;
+      padding: 15px 25px 15px;
       position: absolute;
       left: 0;
       top: 0;
@@ -268,54 +286,48 @@ p {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+
+  p {
+    margin: 20px 0;
+  }
 }
 
-
 footer {
+  display: flex;
+  justify-content: center;
   position: relative;
   bottom: 0;
   width: auto;
-  height: 100px;
-  margin: 0;
+  height: auto;
   background-color: $beige;
 
   h6, h6 a {
     font-family: $fonts-body;
     font-size: .7rem;
-    color: $brown-light;
+    text-align: center;
+    max-width: 768px;
   }
 
   h6 {
-    padding: 25px;
+    padding: 25px 50px;
   }
 }
 
 // Media queries
 @media (min-width: 576px) {
-  #nav-bar ul {
-    display: flex;
-    justify-content: space-around;
+  #header-img {
+    margin-top: 40px;
+  }
+
+  #nav-bar {
     position: absolute;
-    top: -10px;
-    right: 25px;
-    padding: 0;
+    bottom: 25px;
+    right: 0;
     width: 50%;
   }
 }
 
-@media (min-width: 768px) {
-  #nav-bar {
-    max-width: 768px;
-    position: fixed;
-    top: 0;
-  }
-
-  main {
-    margin: 0 auto;
-    margin-top: 215px;
-    max-width: 768px;
-  }
-}
+// @media (min-width: 768px) { }
 
 // ***** Notes *****
 // 1) Shrinkable scrolling navbar code modified from:

@@ -2,45 +2,48 @@ html {
   box-sizing: border-box; }
 
 *, *:before, *:after {
-  box-sizing: inherit; }
-
-body {
+  box-sizing: inherit;
   margin: 0;
-  padding: 0;
-  font-family: cursive; }
+  padding: 0; }
 
 header {
-  display: flex;
-  justify-content: center; }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 230px;
+  background-color: #f7f2de;
+  transition: 0.4s;
+  z-index: 100; }
+
+#header-wrapper {
+  position: relative;
+  max-width: 768px;
+  margin: 0 auto; }
+
+#header-img {
+  margin: 25px 25px 0px 25px;
+  transition: 0.4s; }
+
+.logo-sm {
+  width: 125px; }
+
+.logo-lg {
+  width: 250px; }
 
 #nav-bar {
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  height: 225px;
-  width: 100%;
-  background-color: #f7f2de;
-  z-index: 100;
-  transition: 0.4s; }
-  #nav-bar #header-img {
-    position: fixed;
-    margin: 25px 25px 0px 25px;
-    transition: all 0.4s; }
-  #nav-bar .logo-sm {
-    width: 125px; }
-  #nav-bar .logo-lg {
-    width: 250px; }
+  height: auto;
+  width: 100%; }
   #nav-bar ul {
     display: flex;
     justify-content: space-around;
-    margin-top: 165px;
-    padding: 25px 25px;
+    padding: 10px;
     list-style-type: none;
-    height: 1px;
     transition: all 0.4s; }
     #nav-bar ul li {
       float: left; }
       #nav-bar ul li a {
+        padding: 0;
+        margin: 0;
         display: block;
         font-family: "Fredoka One", "Helvetica", sans-serif;
         font-size: 1.3em;
@@ -51,12 +54,13 @@ header {
           cursor: pointer; }
 
 main {
+  margin: 0 auto;
   margin-top: 225px;
-  z-index: -100px;
-  padding: 25px; }
+  padding: 25px;
+  max-width: 768px; }
 
 section {
-  margin-top: 25px; }
+  margin: 50px 0; }
 
 button, #submit {
   appearance: none;
@@ -75,16 +79,17 @@ button, #submit {
     cursor: pointer; }
 
 form {
-  border: 1px solid red;
+  padding: 15px;
+  margin-bottom: 40px;
   background-color: #8a5d3b;
   border: 2px outset #3b2314;
-  border-radius: 7px;
-  padding: 15px; }
+  border-radius: 7px; }
   form #email {
-    width: 100%;
+    display: block;
+    width: 85%;
     height: 30px;
     margin: 0 auto;
-    padding-left: 5px;
+    padding-left: 10px;
     font-size: .8em;
     border-radius: 7px; }
   form #submit {
@@ -94,9 +99,15 @@ form {
 
 .icon {
   position: relative;
-  top: 15px;
+  top: 5px;
   float: left;
-  margin: 0 20px 10px 0; }
+  margin: 0 20px 20px 0; }
+
+a {
+  color: #8a5d3b;
+  text-decoration: none; }
+  a:hover {
+    color: #3b2314; }
 
 h1, h2, h3 {
   font-family: "Fredoka One", "Helvetica", sans-serif; }
@@ -113,7 +124,8 @@ h1 {
 
 h2 {
   color: #f05a28;
-  font-size: 1.3em; }
+  font-size: 1.4em;
+  margin-bottom: 15px; }
   h2::before {
     display: block;
     content: " ";
@@ -122,10 +134,13 @@ h2 {
     visibility: hidden;
     pointer-events: none; }
 
+#products-header {
+  margin-bottom: -25px; }
+
 h3 {
   color: #f05a28;
   font-size: 1em;
-  margin-bottom: 10px; }
+  margin: 20px 0 10px; }
 
 p {
   font-family: "Helvetica", sans-serif;
@@ -147,11 +162,10 @@ p {
     font-size: 1em;
     line-height: 1.5em; }
   #products .product h5 {
-    padding: 0 25px;
-    font-weight: normal;
-    margin-block-end: 0; }
+    padding: 20px 25px 10px;
+    font-weight: normal; }
   #products .product li {
-    margin-left: 15px; }
+    margin-left: 50px; }
   #products .product #select {
     background: #8a5d3b;
     margin-top: 0;
@@ -159,11 +173,12 @@ p {
     #products .product #select:hover {
       background: #754c28; }
 #products .video {
+  margin: 15px 0 20px;
   position: relative;
   padding-bottom: 56.25%;
   height: 0; }
   #products .video iframe {
-    padding: 10px 25px 25px;
+    padding: 15px 25px 15px;
     position: absolute;
     left: 0;
     top: 0;
@@ -194,39 +209,33 @@ p {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out; }
+  .panel p {
+    margin: 20px 0; }
 
 footer {
+  display: flex;
+  justify-content: center;
   position: relative;
   bottom: 0;
   width: auto;
-  height: 100px;
-  margin: 0;
+  height: auto;
   background-color: #f7f2de; }
   footer h6, footer h6 a {
     font-family: "Helvetica", sans-serif;
     font-size: .7rem;
-    color: #8a5d3b; }
+    text-align: center;
+    max-width: 768px; }
   footer h6 {
-    padding: 25px; }
+    padding: 25px 50px; }
 
 @media (min-width: 576px) {
-  #nav-bar ul {
-    display: flex;
-    justify-content: space-around;
-    position: absolute;
-    top: -10px;
-    right: 25px;
-    padding: 0;
-    width: 50%; } }
-@media (min-width: 768px) {
-  #nav-bar {
-    max-width: 768px;
-    position: fixed;
-    top: 0; }
+  #header-img {
+    margin-top: 40px; }
 
-  main {
-    margin: 0 auto;
-    margin-top: 215px;
-    max-width: 768px; } }
+  #nav-bar {
+    position: absolute;
+    bottom: 25px;
+    right: 0;
+    width: 50%; } }
 
 /*# sourceMappingURL=main.css.map */

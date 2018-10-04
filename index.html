@@ -9,19 +9,21 @@
 </head>
 <body>
   <header id="header">
-    <nav id="nav-bar">
+    <div id="header-wrapper">
       <a href="#">
         <img id="header-img"
-              class="logo-lg" src="https://raw.githubusercontent.com/Feldbot/fcc-product-landing-page/master/images/poopet-logo.png"
-              alt="poopet logo with cat and steaming poo">
+             class="logo-lg" src="https://raw.githubusercontent.com/Feldbot/fcc-product-landing-page/master/images/poopet-logo.png"
+             alt="poopet logo with cat and steaming poo">
       </a>
-      <!-- Need hrefs on <li> to pass test -->
-      <ul>
-        <li class="nav-link" href="#about-header"><a href="#about-header">About</a></li>
-        <li class="nav-link" href="#products-header"><a href="#products-header">Products</a></li>
-        <li class="nav-link" href="#faqs-header"><a href="#faqs-header">FAQs</a></li>
-      </ul>
-    </nav>
+      <nav id="nav-bar">
+        <!-- Need hrefs on <li> to pass test -->
+        <ul>
+          <li class="nav-link" href="#about-header"><a href="#about-header">About</a></li>
+          <li class="nav-link" href="#products-header"><a href="#products-header">Products</a></li>
+          <li class="nav-link" href="#faqs-header"><a href="#faqs-header">FAQs</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -49,15 +51,15 @@
       <img class="icon"
            src="images/toilet-icon.png"
            alt="toilet icon"
-           width="50" >
+           width="40"
+           style="margin-right: 30px">
       <p>poopet&reg; products are manufactured with the only the finest materials available from the most affordable sources worldwide. You'll feel good knowing we've flushed the costs for you!</p>
 
       <h3>Fast Shipping</h3>
       <img class="icon"
            src="images/truck-icon.png"
            alt="truck icon"
-           width="50"
-           >
+           width="50">
       <p>With a solid legacy for speedy and safe shipping, poopet&reg; naturally chose UPS Brown as our trusted <em>poopartner</em>. You'll relax knowing Brown may answer all your shipping inquiries!</p>
 
       <h3>Customer Satisfaction</h3>
@@ -72,14 +74,13 @@
       <h2 id="products-header">Products</h2>
       <section class="product">
         <h4>Litter Kwitter</h4>
-        <h5>Never clean a litter box again after teaching your furry friend to flush.</h5>
+        <h5>Never clean a litter box again after teaching your furry friend to flush!</h5>
         <ul>
-          <li>Hygenic and efficient</li>
-          <li>Great conversation topic</li>
+          <li>Toilet paper not needed</li>
+          <li>Great conversation starter</li>
           <li>Fun to watch pet poo</li>
         </ul>
         <div class="video">
-          <!-- Need id to pass tests -->
           <iframe
             id="video"
             width="560"
@@ -92,34 +93,34 @@
 
       <section class="product">
         <h4>Woofloo</h4>
-        <h5>You'll never need to walk the dog again with this sensible and sanitary solution.</h5>
+        <h5>You can forget about ever walking the dog again with this sensible and sanitary excrement solution.</h5>
         <ul>
-          <li>Convenient flush timer</li>
+          <li>Flush-it-later timer</li>
           <li>Beautiful plastic grass</li>
           <li>Feels good on bare feet</li>
         </ul>
         <div class="video">
-          <!-- <iframe width="560"
+          <iframe width="560"
           height="315" src="https://www.youtube.com/embed/Zu-q9kWVB50?rel=0&amp;showinfo=0"
           frameborder="0"
-          allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+          allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
         <button id="select">Select</button>
       </section>
 
       <section class="product">
-        <h4>Pootrap</h4>
-        <h5>Cleaning up after your pet is embarrasing and exhausting. You'll never stoop that low again with pet diapers.</h5>
+        <h4>PooTrap</h4>
+        <h5>Cleaning up after your pet is embarrasing and exhausting. You'll never stoop that low again with these magical pet diapers!</h5>
         <ul>
-          <li>Easy to install</li>
+          <li>Colors for every occasion</li>
           <li>Handsome and elegant</li>
           <li>Reusable bags</li>
         </ul>
         <div class="video">
-          <!-- <iframe width="560"
+          <iframe width="560"
           height="315" src="https://www.youtube.com/embed/-IrlhLF1c3k?rel=0&amp;showinfo=0"
           frameborder="0"
-          allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+          allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
         <button id="select">Select</button>
       </section>
@@ -134,11 +135,11 @@
         </div>
         <button class="accordion">Can I return my product?</button>
         <div class="panel">
-          <p>Of course! Simply ship back your unopened poopet&reg; product within 5 calendar days, with shipping manifest and original packaging, insured for the value of the product, postage paid by customer. We'll gladly return your money in full, minus 75% restocking and 20% handling service fees, or charge your credit card for any new balances that accrue through third party agreements.</p>
+          <p>Of course! Simply ship back your unopened poopet&reg; product within 5 calendar days, with shipping manifest and original packaging, insured for the value of the product, postage paid by customer. We'll gladly return your money in full, minus 75% restocking and 20% handling service fees, or charge your credit card for any new balances that accrue due to third party agreements.</p>
         </div>
         <button class="accordion">Is this a joke?</button>
         <div class="panel">
-          <p>Yes, this is a joke. It's actually a web development project showcasing a responsive design product page. No animals were harmed or humiliated in the production of this site.</p>
+          <p>Yes, this is a joke. It's actually a web development project showcasing a responsive design product page. No animals were harmed in the pooduction of this site.</p>
         </div>
       </div>
     </section>
@@ -146,12 +147,28 @@
 
   <footer>
     <h6>The work, &ldquo;poopet logo&rdquo; is a derivative of &ldquo;<a
-      href='https://www.toicon.com/icons/lines-and-angles_smell' target='_blank'>to smell</a>&rdquo; and &ldquo;
-      <a href='https://www.toicon.com/icons/lines-and-angles_forebode' target='_blank'>to forbode</a>&rdquo; icons, by
-      <a href='https://www.toicon.com/authors/shannon' target='_blank'>Shannon E Thomas</a>, used under
-      <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>. &ldquo;poopet logo&rdquo; is licensed under
-      <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a> by
-      <a href='https://www.linkedin.com/feldbot' target='_blank'>Daniel Feldman</a>.</h6>
+      href='https://www.toicon.com/icons/lines-and-angles_smell'
+      target='_blank'>to smell</a>&rdquo; and &ldquo;
+      <a href='https://www.toicon.com/icons/lines-and-angles_forebode'
+         target='_blank'>to forbode</a>&rdquo; icons, by
+      <a href='https://www.toicon.com/authors/shannon'
+         target='_blank'>Shannon E Thomas</a>, used under
+      <a href='https://creativecommons.org/licenses/by/4.0/'
+         target='_blank'>CC BY 4.0</a>. &ldquo;poopet logo&rdquo; is licensed under
+      <a href='https://creativecommons.org/licenses/by/4.0/'
+         target='_blank'>CC BY 4.0</a> by
+      <a href='https://www.linkedin.com/feldbot'
+         target='_blank'>Daniel Feldman</a>. &ldquo;<a href="https://www.toicon.com/icons/blueprint_poop"
+         target="_blank">to poop</a>&rdquo;, &ldquo;
+      <a href="https://www.toicon.com/icons/lines-and-angles_transport"
+         target="_blank">to transport</a>&rdquo;, and &ldquo;
+      <a href="https://www.toicon.com/icons/stone_contribute"
+         target="_blank">to contribute</a>&rdquo; icons, by Shannon E Thomas, used under
+      <a href='https://creativecommons.org/licenses/by/4.0/'
+         target='_blank'>CC BY 4.0</a>, color modifications from original.<br /><br />
+      Design, code, and copy by <a href='https://www.linkedin.com/feldbot'
+         target='_blank'>feldbot</a> &copy; 2018
+    </h6>
   </footer>
 
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
@@ -159,11 +176,3 @@
 
 </body>
 </html>
-
-<!-- Notes
-1) Needed href attribute on <li> tags to pass tests
-to contribute piggy
-https://www.toicon.com/icons/stone_contribute
-to poop
-https://www.toicon.com/icons/blueprint_poop
--->
