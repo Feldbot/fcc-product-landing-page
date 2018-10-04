@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>poopet RWD</title>
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+  <header id="header">
+    <nav id="nav-bar">
+      <a href="#">
+        <img id="header-img"
+              class="logo-lg" src="https://raw.githubusercontent.com/Feldbot/fcc-product-landing-page/master/images/poopet-logo.png"
+              alt="poopet logo with cat and steaming poo">
+      </a>
+      <!-- Need hrefs on <li> to pass test -->
+      <ul>
+        <li class="nav-link" href="#about-header"><a href="#about-header">About</a></li>
+        <li class="nav-link" href="#products-header"><a href="#products-header">Products</a></li>
+        <li class="nav-link" href="#faqs-header"><a href="#faqs-header">FAQs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Email form field-->
+    <section>
+      <form id="form"
+            action="https://www.freecodecamp.com/email-submit">
+        <h1>Get the latest poop!</h1>
+        <label for="email">
+          <input type="email" id="email"
+          name="email"
+          placeholder="Enter your email address"
+          required>
+        </label>
+        <input type="submit" id="submit"></input>
+      </form>
+    </section>
+
+    <section id="about">
+      <h2 id="about-header">About poopet&reg;</h2>
+      <p>Since 1991, the poopet&reg; mission is to be the world's leader in pet toiletry distribution. Looking beyond a strong rank of competitors, our <em>poople</em> consistently choose poopet&reg; to eliminate their nastiest pet problems.</p>
+
+      <h3>Premium Materials</h3>
+      <img class="icon"
+           src="images/toilet-icon.png"
+           alt="toilet icon"
+           width="50" >
+      <p>poopet&reg; products are manufactured with the only the finest materials available from the most affordable sources worldwide. You'll feel good knowing we've flushed the costs for you!</p>
+
+      <h3>Fast Shipping</h3>
+      <img class="icon"
+           src="images/truck-icon.png"
+           alt="truck icon"
+           width="50"
+           >
+      <p>With a solid legacy for speedy and safe shipping, poopet&reg; naturally chose UPS Brown as our trusted <em>poopartner</em>. You'll relax knowing Brown may answer all your shipping inquiries!</p>
+
+      <h3>Customer Satisfaction</h3>
+      <img class="icon"
+           src="images/piggy-icon.png"
+           alt="piggy bank icon"
+           width="50">
+      <p>At poopet&reg;, we love to keep our <em>poople</em> happy! That's why each product comes with a hassle-free 5-day money-back guarantee. See the <a href="#faqs">FAQs</a> for more information.</p>
+    </section>
+
+    <section id="products">
+      <h2 id="products-header">Products</h2>
+      <section class="product">
+        <h4>Litter Kwitter</h4>
+        <h5>Never clean a litter box again after teaching your furry friend to flush.</h5>
+        <ul>
+          <li>Hygenic and efficient</li>
+          <li>Great conversation topic</li>
+          <li>Fun to watch pet poo</li>
+        </ul>
+        <div class="video">
+          <!-- Need id to pass tests -->
+          <iframe
+            id="video"
+            width="560"
+            height="315" src="https://www.youtube.com/embed/jFMVCwG3ajA?rel=0&amp;showinfo=0"
+            frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <button id="select">Select</button>
+      </section>
+
+      <section class="product">
+        <h4>Woofloo</h4>
+        <h5>You'll never need to walk the dog again with this sensible and sanitary solution.</h5>
+        <ul>
+          <li>Convenient flush timer</li>
+          <li>Beautiful plastic grass</li>
+          <li>Feels good on bare feet</li>
+        </ul>
+        <div class="video">
+          <!-- <iframe width="560"
+          height="315" src="https://www.youtube.com/embed/Zu-q9kWVB50?rel=0&amp;showinfo=0"
+          frameborder="0"
+          allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+        </div>
+        <button id="select">Select</button>
+      </section>
+
+      <section class="product">
+        <h4>Pootrap</h4>
+        <h5>Cleaning up after your pet is embarrasing and exhausting. You'll never stoop that low again with pet diapers.</h5>
+        <ul>
+          <li>Easy to install</li>
+          <li>Handsome and elegant</li>
+          <li>Reusable bags</li>
+        </ul>
+        <div class="video">
+          <!-- <iframe width="560"
+          height="315" src="https://www.youtube.com/embed/-IrlhLF1c3k?rel=0&amp;showinfo=0"
+          frameborder="0"
+          allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+        </div>
+        <button id="select">Select</button>
+      </section>
+    </section>
+
+    <section id="faqs">
+      <h2 id="faqs-header">FAQs</h2>
+      <div>
+        <button class="accordion">Are the products guaranteed?</button>
+        <div class="panel">
+          <p>We are confident your pet might easily be able to fully use each poopet&reg; product. </p>
+        </div>
+        <button class="accordion">Can I return my product?</button>
+        <div class="panel">
+          <p>Of course! Simply ship back your unopened poopet&reg; product within 5 calendar days, with shipping manifest and original packaging, insured for the value of the product, postage paid by customer. We'll gladly return your money in full, minus 75% restocking and 20% handling service fees, or charge your credit card for any new balances that accrue through third party agreements.</p>
+        </div>
+        <button class="accordion">Is this a joke?</button>
+        <div class="panel">
+          <p>Yes, this is a joke. It's actually a web development project showcasing a responsive design product page. No animals were harmed or humiliated in the production of this site.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h6>The work, &ldquo;poopet logo&rdquo; is a derivative of &ldquo;<a
+      href='https://www.toicon.com/icons/lines-and-angles_smell' target='_blank'>to smell</a>&rdquo; and &ldquo;
+      <a href='https://www.toicon.com/icons/lines-and-angles_forebode' target='_blank'>to forbode</a>&rdquo; icons, by
+      <a href='https://www.toicon.com/authors/shannon' target='_blank'>Shannon E Thomas</a>, used under
+      <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a>. &ldquo;poopet logo&rdquo; is licensed under
+      <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>CC BY 4.0</a> by
+      <a href='https://www.linkedin.com/feldbot' target='_blank'>Daniel Feldman</a>.</h6>
+  </footer>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
+
+<!-- Notes
+1) Needed href attribute on <li> tags to pass tests
+to contribute piggy
+https://www.toicon.com/icons/stone_contribute
+to poop
+https://www.toicon.com/icons/blueprint_poop
+-->

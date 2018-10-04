@@ -1,0 +1,331 @@
+$beige: rgb(247, 242, 222);
+$orange: rgb(240, 90, 40);
+$orange-dark: rgb(226, 68, 15);
+$brown-light: rgb(138, 93, 59);
+$brown-medium: rgb(117, 76, 40);
+$brown-dark: rgb(59, 35, 20);
+
+$fonts-brand: "Fredoka One", "Helvetica", sans-serif;
+$fonts-body: "Helvetica", sans-serif;
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+// Navigation - see Notes 1)
+#nav-bar {
+  position: fixed;
+  overflow: hidden; // But why?
+  top: 0;
+  height: 225px;
+  width: 100%;
+  background-color: $beige;
+  z-index: 100;
+  transition: 0.4s;
+
+  #header-img {
+    position: fixed;
+    margin: 25px 25px 0px 25px;
+    transition: all 0.4s; // all ?
+  }
+  .logo-sm {
+   width: 125px;
+  }
+  .logo-lg {
+   width: 250px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 165px;
+    padding: 25px 25px;
+    list-style-type: none;
+    height: 1px;
+    transition: all 0.4s;
+
+    li {
+      float: left;
+
+      a {
+        display: block;
+        font-family: $fonts-brand;
+        font-size: 1.3em;
+        text-decoration: none;
+        color: $orange;
+
+        &:hover {
+          color: $brown-light;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+main {
+  margin-top: 225px;
+  z-index: -100px;
+  padding: 25px;
+}
+
+section {
+  margin-top: 25px;
+}
+
+button, #submit {
+  appearance: none;
+  display: block;
+  height: 35px;
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-family: $fonts-brand;
+  font-size: 1.2em;
+  letter-spacing: .025em;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+form {
+  border: 1px solid red;
+  background-color: $brown-light;
+  border: 2px outset $brown-dark;
+  border-radius: 7px;
+  padding: 15px;
+
+  #email {
+    width: 100%;
+    height: 30px;
+    margin: 0 auto;
+    padding-left: 5px;
+    font-size: .8em;
+    border-radius: 7px;
+  }
+
+  #submit {
+    background: $orange;
+
+    &:hover {
+      background: $orange-dark;
+    }
+  }
+}
+
+.icon {
+  position: relative;
+  top: 15px;
+  float: left;
+  margin: 0 20px 10px 0;
+}
+
+h1, h2, h3 {
+  font-family: $fonts-brand;
+}
+h4, h5, h6, li {
+  font-family: $fonts-body
+}
+
+h1 {
+  color: #fff;
+  margin: 0 0 15px;
+  font-size: 1.5em;
+  letter-spacing: .025em;
+  text-align: center;
+}
+
+h2 {
+  color: $orange;
+  font-size: 1.3em;
+
+  // See Notes 2)
+  &::before {
+    display: block;
+    content: " ";
+    margin-top: -175px;
+    height: 175px;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+h3 {
+  color: $orange;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: $fonts-body;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+#products {
+  // background-color: $brown-light;
+
+  .product {
+    background-color: $beige;
+    border: 1px solid $brown-light;
+
+    h4 {
+      margin: 0;
+      padding: 15px 25px;
+      width: 100%;
+      font-size: 1.2em;
+      color: #fff;
+      background-color: $orange;
+    }
+
+    h5, li {
+      color: $brown-medium;
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+
+    h5 {
+      padding: 0 25px;
+      font-weight: normal;
+      margin-block-end: 0; // user agent style
+    }
+
+    li {
+      margin-left: 15px;
+    }
+
+    #select {
+      background: $brown-light;
+      margin-top: 0;
+      margin-bottom: 25px;
+
+      &:hover {
+        background: $brown-medium;
+      }
+    }
+  }
+
+  // Responsive iframe - See Notes 3)
+  .video {
+    position: relative;
+    padding-bottom: 56.25%; // 16:9
+    height: 0;
+
+    iframe {
+      padding: 10px 25px 25px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+// FAQ accordion - see Notes 4)
+.accordion {
+  background-color: $brown-light;
+  color: #fff;
+  cursor: pointer;
+  margin: 0;
+  padding: 0 15px;
+  width: 100%;
+  border: 1px solid $brown-dark;
+  border-radius: 0;
+  text-align: left;
+  outline: none;
+  font-family: $fonts-body;
+  font-size: 1em;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: $brown-medium;
+}
+
+.panel {
+  padding: 0 25px;
+  background-color: $beige;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: auto;
+  height: 100px;
+  margin: 0;
+  background-color: $beige;
+
+  h6, h6 a {
+    font-family: $fonts-body;
+    font-size: .7rem;
+    color: $brown-light;
+  }
+
+  h6 {
+    padding: 25px;
+  }
+}
+
+// Media queries
+@media (min-width: 576px) {
+  #nav-bar ul {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: -10px;
+    right: 25px;
+    padding: 0;
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  #nav-bar {
+    max-width: 768px;
+    position: fixed;
+    top: 0;
+  }
+
+  main {
+    margin: 0 auto;
+    margin-top: 215px;
+    max-width: 768px;
+  }
+}
+
+// ***** Notes *****
+// 1) Shrinkable scrolling navbar code modified from:
+// https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_shrink_scroll
+
+// 2) Fixed header throws off inline anchor links. To fix this a pseudo-element is used to manipulate the space taken by the header. Reference:
+// https://css-tricks.com/hash-tag-links-padding/
+
+// 3) Responsive iframe needs a parent (position: relative) and child (position: absolute). The parent has intrinsic video aspect ratio. The child element is set at 100% of parent. Reference:
+// https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
+// https://stackoverflow.com/questions/43954836/disabling-blackbars-on-youtube-embed-iframe
+
+// 4) Accordion code modified from:
+// https://www.w3schools.com/howto/howto_js_accordion.asp
