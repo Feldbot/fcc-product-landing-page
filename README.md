@@ -1,11 +1,10 @@
 # Build a Survey Form
 
-The [Build a Survey Form](https://feldbot.github.io/fcc-survey-form/) project is part of Free Code Camp's Responsive Web Design certificate curriculum. The [project requirements](https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-survey-form/) are to create a responsive form that uses HTML5 validation and passes integrated tests.         
+The [Build a Product Landing Page](https://feldbot.github.io/fcc-product-landing-page/) project is part of Free Code Camp's Responsive Web Design certificate curriculum. The [project requirements](https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page/) are to create a responsive product landing page form that uses HTML5 validation and passes integrated tests.         
 
 ## Built With
 
 - HTML, CSS, JavaScript
-- [jQuery](https://jquery.com/) - JavaScript library
 - [Sass](https://sass-lang.com/) - CSS preprocessor
 
 ## Installing
