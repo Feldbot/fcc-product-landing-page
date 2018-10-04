@@ -1,6 +1,6 @@
-# Build a Survey Form
+# Build a Product Landing Page
 
-The [Build a Product Landing Page](https://feldbot.github.io/fcc-product-landing-page/) project is part of Free Code Camp's Responsive Web Design certificate curriculum. The [project requirements](https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page/) are to create a responsive product landing page form that uses HTML5 validation and passes integrated tests.         
+The [Build a Product Landing Page](https://feldbot.github.io/fcc-product-landing-page/) project is part of Free Code Camp's Responsive Web Design certificate curriculum. The [project requirements](https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page/) are to create a responsive product landing page that has inline anchors, form submission validation, uses responsive media queries, and passes integrated tests.         
 
 ## Built With
 
@@ -22,3 +22,7 @@ Free Code Camp integrates testing to ensure projects pass requirements. Tests ar
 
 * **Daniel Feldman** - *Initial work* - [freeCodeCamp Portfolio](https://feldbot.github.io/fcc-portfolio/)
 * Feel free to [contact me](mailto:feldbot@gmail.com) with any comments or questions
+
+## Acknowledgements
+* [toicon.com](https://www.toicon.com/) for the great free icons
+* [poopets.com](http://www.poopets.com/) for the inspiration
